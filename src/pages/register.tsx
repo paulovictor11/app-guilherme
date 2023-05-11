@@ -5,6 +5,7 @@ import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Link from "next/link";
 
 const createRegisterUserSchema = z.object({
     name: z.string().nonempty("O campo é obrigatório"),
@@ -57,7 +58,7 @@ export default function RegisterPage() {
                 />
                 <form
                     onSubmit={handleSubmit(createUser)}
-                    className="flex flex-col gap-4 w-full max-w-xl border border-zinc-300 rounded-lg p-10 bg-zinc-100 shadow-sm"
+                    className="flex flex-col gap-4 w-full max-w-xl border border-zinc-300 rounded-lg p-5 bg-zinc-100 shadow-sm"
                 >
                     <div className="flex flex-col gap-1">
                         <label htmlFor="name">Nome:</label>
@@ -130,6 +131,13 @@ export default function RegisterPage() {
                     >
                         {isLoading ? "Carregando..." : "cadastrar"}
                     </button>
+
+                    <Link
+                        href="/login"
+                        className="flex justify-center cursor-pointer hover:underline underline-offset-2 font-medium"
+                    >
+                        Já possuo conta
+                    </Link>
                 </form>
             </main>
             <footer className="w-full border-t-8 border-b-8 border-emerald-600 py-5 text-center bg-zinc-100">

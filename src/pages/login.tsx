@@ -53,7 +53,7 @@ export default function LoginPage() {
                 />
                 <form
                     onSubmit={handleSubmit(logInUser)}
-                    className="flex flex-col gap-4 w-full max-w-xl border border-zinc-300 rounded-lg p-10 bg-zinc-100 shadow-sm"
+                    className="flex flex-col gap-4 w-full max-w-xl border border-zinc-300 rounded-lg p-5 bg-zinc-100 shadow-sm"
                 >
                     <div className="flex flex-col gap-1">
                         <label htmlFor="user">Usuário:</label>
