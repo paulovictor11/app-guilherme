@@ -127,9 +127,9 @@ export default function RegisterPage() {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="bg-emerald-600 rounded font-semibold text-white h-10 hover:bg-emerald-700 transition-colors uppercase"
+                        className="bg-emerald-600 rounded font-semibold text-white h-10 hover:bg-emerald-700 transition-colors"
                     >
-                        {isLoading ? "Carregando..." : "cadastrar"}
+                        {isLoading ? "Carregando..." : "Cadastrar"}
                     </button>
 
                     <Link

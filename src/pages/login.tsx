@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Footer } from "@/components/Footer";
 
 const createLoginUserSchema = z.object({
     user: z.string().nonempty("O campo é obrigatório"),
@@ -90,7 +91,7 @@ export default function LoginPage() {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="bg-emerald-600 rounded font-semibold text-white h-10 hover:bg-emerald-700 transition-colors uppercase"
+                        className="bg-emerald-600 rounded font-semibold text-white h-10 hover:bg-emerald-700 transition-colors"
                     >
                         {isLoading ? "Carregando..." : "Entrar"}
                     </button>
@@ -103,12 +104,8 @@ export default function LoginPage() {
                     </Link>
                 </form>
             </main>
-            <footer className="w-full border-t-8 border-b-8 border-emerald-600 py-5 text-center bg-zinc-100">
-                <span>
-                    &copy; {new Date().getFullYear()} - Todos os direitos são
-                    reservados
-                </span>
-            </footer>
+
+            <Footer />
         </div>
     );
 }
